@@ -1,27 +1,25 @@
-package com.itheima.dao;
+package com.lingzst.service;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.itheima.domain.Student;
+import com.lingzst.domain.PageBean;
+import com.lingzst.domain.Student;
 
 /**
- * 这是针对学生表的数据访问 
+ * 这是学生的业务处理规范
  * @author xiaomi
  *
  */
-public interface StudentDao {
-	
-	int PAGE_SIZE = 5; //一页显示多少条记录
-	
+public interface StudentService {
 	/**
-	 * 查询当页的学生数据
+	 * 查询当页的数据
 	 * @param currentPage
 	 * @return
 	 * @throws SQLException
 	 */
-	List<Student> findStudentByPage(int currentPage) throws SQLException ;
-	
+	PageBean findStudentByPage(int currentPage) throws SQLException ;
+
 	/**
 	 * 查询所有学生
 	 * @return  List<Student>
@@ -35,7 +33,7 @@ public interface StudentDao {
 	 * @throws SQLException
 	 */
 	Student findStudentById(int sid)  throws SQLException ;
-
+	
 	/**
 	 * 模糊查询， 根据姓名或者根据性别，或者两者兼有。 
 	 * @param sname
@@ -44,7 +42,7 @@ public interface StudentDao {
 	 * @throws SQLException
 	 */
 	List<Student> searchStudent(String sname , String sgender)  throws SQLException ;
-
+	
 	/**
 	 * 添加学生
 	 * @param student 需要添加到数据库的学生对象
@@ -65,14 +63,4 @@ public interface StudentDao {
 	 * @throws SQLException
 	 */
 	void update (Student student )throws SQLException ;
-	
-	
-	/**
-	 * 查询总的学生记录数
-	 * @return
-	 * @throws SQLException
-	 */
-	int findCount()throws SQLException ;
-	
-	
 }

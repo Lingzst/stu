@@ -1,4 +1,4 @@
-package com.itheima.domain;
+package com.lingzst.domain;
 
 import java.util.List;
 

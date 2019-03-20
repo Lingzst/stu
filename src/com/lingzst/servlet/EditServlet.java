@@ -1,4 +1,4 @@
-package com.itheima.servlet;
+package com.lingzst.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.itheima.domain.Student;
-import com.itheima.service.StudentService;
-import com.itheima.service.impl.StudentServiceImpl;
+import com.lingzst.domain.Student;
+import com.lingzst.service.StudentService;
+import com.lingzst.service.impl.StudentServiceImpl;
 
 /**
  * 处理单个学生的更新， 查询一个学生的信息，然后跳转到更新页面

@@ -1,4 +1,4 @@
-package com.itheima.util;
+package com.lingzst.util;
 
 public class TextUtils {
 

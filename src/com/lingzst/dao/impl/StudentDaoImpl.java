@@ -1,4 +1,4 @@
-package com.itheima.dao.impl;
+package com.lingzst.dao.impl;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -10,10 +10,10 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import com.itheima.dao.StudentDao;
-import com.itheima.domain.Student;
-import com.itheima.util.JDBCUtil02;
-import com.itheima.util.TextUtils;
+import com.lingzst.dao.StudentDao;
+import com.lingzst.domain.Student;
+import com.lingzst.util.JDBCUtil02;
+import com.lingzst.util.TextUtils;
 
 /**
  * 这是StudentDao的实现。 针对前面定义的规范，做出具体的实现。

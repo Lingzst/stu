@@ -1,34 +1,35 @@
-package com.itheima.servlet;
+package com.lingzst.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.itheima.service.StudentService;
-import com.itheima.service.impl.StudentServiceImpl;
+import com.lingzst.domain.Student;
+import com.lingzst.service.StudentService;
+import com.lingzst.service.impl.StudentServiceImpl;
 
 /**
- * 用于处理删除学生
- * @author xiaomi
- *
+ * 负责查询所有的学生信息。 然后呈现到list.jsp页面上。
  */
-public class DeleteServlet extends HttpServlet {
+public class StudentListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+	
+		
 		try {
-			//1. 接收id
-			int sid = Integer.parseInt(request.getParameter("sid"));
-			
-			//2. 执行删除
+		
+			//1. 查询出来所有的学生
 			StudentService service = new StudentServiceImpl();
-			service.delete(sid);
+			List<Student> list = service.findAll();
 			
-			//3. 跳转到列表页。
-			request.getRequestDispatcher("StudentListServlet").forward(request, response);
+			//2. 先把数据存储到作用域中
+			request.setAttribute("list", list);
+			//3. 跳转页面
+			request.getRequestDispatcher("list.jsp").forward(request, response);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -36,11 +37,7 @@ public class DeleteServlet extends HttpServlet {
 		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

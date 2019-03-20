@@ -1,13 +1,13 @@
-package com.itheima.service.impl;
+package com.lingzst.service.impl;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.itheima.dao.StudentDao;
-import com.itheima.dao.impl.StudentDaoImpl;
-import com.itheima.domain.PageBean;
-import com.itheima.domain.Student;
-import com.itheima.service.StudentService;
+import com.lingzst.dao.StudentDao;
+import com.lingzst.dao.impl.StudentDaoImpl;
+import com.lingzst.domain.PageBean;
+import com.lingzst.domain.Student;
+import com.lingzst.service.StudentService;
 
 /**
  * 这是学生业务实现

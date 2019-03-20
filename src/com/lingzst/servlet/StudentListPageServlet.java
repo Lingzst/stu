@@ -1,4 +1,4 @@
-package com.itheima.servlet;
+package com.lingzst.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.catalina.valves.StuckThreadDetectionValve;
 
-import com.itheima.domain.PageBean;
-import com.itheima.service.StudentService;
-import com.itheima.service.impl.StudentServiceImpl;
+import com.lingzst.domain.PageBean;
+import com.lingzst.service.StudentService;
+import com.lingzst.service.impl.StudentServiceImpl;
 
 
 /**
